@@ -1,25 +1,79 @@
 //
-//  AppDelegate.m
+//  Application.m
 //  Flickreel
 //
 //  Created by Austris Landmanis on 08/12/13.
 //  Copyright (c) 2013 Austris Landmanis. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "Application.h"
 
-@implementation AppDelegate
+
+
+@implementation Application
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    
+/*
+    UINavigationController * nc = (UINavigationController *)self.window.rootViewController;
+    MoviesTableViewController * mtvc = (MoviesTableViewController *)[[nc viewControllers] objectAtIndex:0];
+    
+    mtvc.managedObjectContext = self.managedObjectContext;
+*/
+    
+    // UINavigationController * navigationController = (UINavigationController *)[storyboard instantiateInitialViewController];
+    
+    // MoviesTableViewController * moviesController = (MoviesTableViewController *)[[navigationController viewControllers] objectAtIndex:0];
+    
+    // SearchTableViewController * searchMoviesController = (SearchTableViewController *)[storyboard instantiateViewControllerWithIdentifier:@"searchController"];
+    
+    // moviesController.managedObjectContext = self.managedObjectContext;
+    
+    // self.slidingViewController = [ECSlidingViewController slidingWithTopViewController:navigationController];
+    // self.slidingViewController.underLeftViewController  = searchMoviesController;
+    // self.slidingViewController.underRightViewController = underRightViewController;
+    
+    // enable swiping on the top view
+    // [navigationController.view addGestureRecognizer:self.slidingViewController.panGesture];
+    
+    // configure anchored layout
+    // self.slidingViewController.anchorRightPeekAmount  = 100.0;
+    // self.slidingViewController.anchorLeftRevealAmount = 50.0;
+    
+    // self.window.rootViewController = self.slidingViewController;
+    
+//    
+//    [self setNavigationController:[storyboard instantiateViewControllerWithIdentifier:@"navigationController"]];
+//    
+//    [self setMoviesController:[[[self navigationController] viewControllers] objectAtIndex:0]];
+//    [[self moviesController] setManagedObjectContext:[self managedObjectContext]];
+//
+//    
+//    [self setSearchController:[storyboard instantiateViewControllerWithIdentifier:@"searchNavController"]];
+//    
+//    
+//    [self setDrawerController:[[DrawerController alloc] initWithCenterViewController:[self navigationController] leftDrawerViewController:[self searchController] rightDrawerViewController:nil]];
+//    
+//    [[self window] setRootViewController:[self drawerController]];
+    
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Flickreel" bundle:nil];
+//    
+//    [[self navigationController] initWithRootViewController:[self searchController]];
+//    
+//    [[self window] setRootViewController:[self navigationController]];
+    
+    //[self setSearchController:[storyboard instantiateViewControllerWithIdentifier:@"searchController"]];
+    
+//    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[self searchController]];
+//    
+//    [[self window] setRootViewController:navigationController];
+    
     return YES;
 }
 
@@ -51,21 +105,21 @@
     [self saveContext];
 }
 
+#pragma mark - Core Data stack
+
 - (void)saveContext
 {
-    NSError *error = nil;
-    NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
+    NSError * error = nil;
+    NSManagedObjectContext * managedObjectContext = self.managedObjectContext;
     if (managedObjectContext != nil) {
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
-             // Replace this implementation with code to handle the error appropriately.
-             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
+            // Replace this implementation with code to handle the error appropriately.
+            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
-        } 
+        }
     }
 }
-
-#pragma mark - Core Data stack
 
 // Returns the managed object context for the application.
 // If the context doesn't already exist, it is created and bound to the persistent store coordinator for the application.

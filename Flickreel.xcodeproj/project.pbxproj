@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6277997185DE7A9005EF665 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6277996185DE7A9005EF665 /* NavigationController.m */; };
+		C6376A7E1855000300333547 /* ShowMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6376A7D1855000300333547 /* ShowMovieViewController.m */; };
+		C6376A8118550D2500333547 /* SearchControllers.m in Sources */ = {isa = PBXBuildFile; fileRef = C6376A8018550D2500333547 /* SearchControllers.m */; };
+		C64DCB14185CFED2002906BC /* MoviesView.m in Sources */ = {isa = PBXBuildFile; fileRef = C64DCB13185CFED2002906BC /* MoviesView.m */; };
 		C69F85261854BF33006995E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C69F85251854BF33006995E4 /* Foundation.framework */; };
 		C69F85281854BF33006995E4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C69F85271854BF33006995E4 /* CoreGraphics.framework */; };
 		C69F852A1854BF33006995E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C69F85291854BF33006995E4 /* UIKit.framework */; };
 		C69F852C1854BF33006995E4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C69F852B1854BF33006995E4 /* CoreData.framework */; };
 		C69F85321854BF33006995E4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C69F85301854BF33006995E4 /* InfoPlist.strings */; };
 		C69F85341854BF33006995E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C69F85331854BF33006995E4 /* main.m */; };
-		C69F85381854BF33006995E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C69F85371854BF33006995E4 /* AppDelegate.m */; };
+		C69F85381854BF33006995E4 /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = C69F85371854BF33006995E4 /* Application.m */; };
 		C69F853B1854BF33006995E4 /* Flickreel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C69F85391854BF33006995E4 /* Flickreel.xcdatamodeld */; };
 		C69F853D1854BF33006995E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C69F853C1854BF33006995E4 /* Images.xcassets */; };
 		C69F85441854BF33006995E4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C69F85431854BF33006995E4 /* XCTest.framework */; };
@@ -22,6 +26,13 @@
 		C69F85471854BF33006995E4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C69F852B1854BF33006995E4 /* CoreData.framework */; };
 		C69F854F1854BF33006995E4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C69F854D1854BF33006995E4 /* InfoPlist.strings */; };
 		C69F85511854BF33006995E4 /* FlickreelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C69F85501854BF33006995E4 /* FlickreelTests.m */; };
+		C69F855E1854C86B006995E4 /* Flickreel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C69F855D1854C86B006995E4 /* Flickreel.storyboard */; };
+		C69F85611854CB7E006995E4 /* MoviesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C69F85601854CB7E006995E4 /* MoviesTableViewController.m */; };
+		C69F85641854D940006995E4 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = C69F85631854D940006995E4 /* Movie.m */; };
+		C69F85671854EADA006995E4 /* AddMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C69F85661854EADA006995E4 /* AddMovieViewController.m */; };
+		C6AF5AC618590D4A0087F8E4 /* DrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AF5AC518590D4A0087F8E4 /* DrawerController.m */; };
+		C6E6268D185F85640022023E /* SearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E6268C185F85640022023E /* SearchController.m */; };
+		C73E6A8F0D62429DBFB89278 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B1C3CD54FD42439169FDC2 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +46,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		670BE8090EE7426B9A9207A4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		C6277995185DE7A9005EF665 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		C6277996185DE7A9005EF665 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
+		C6376A7C1855000300333547 /* ShowMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowMovieViewController.h; sourceTree = "<group>"; };
+		C6376A7D1855000300333547 /* ShowMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowMovieViewController.m; sourceTree = "<group>"; };
+		C6376A7F18550D2500333547 /* SearchControllers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchControllers.h; sourceTree = "<group>"; };
+		C6376A8018550D2500333547 /* SearchControllers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchControllers.m; sourceTree = "<group>"; };
+		C64DCB12185CFED2002906BC /* MoviesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesView.h; sourceTree = "<group>"; };
+		C64DCB13185CFED2002906BC /* MoviesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesView.m; sourceTree = "<group>"; };
 		C69F85221854BF33006995E4 /* Flickreel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flickreel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C69F85251854BF33006995E4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C69F85271854BF33006995E4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -44,8 +64,8 @@
 		C69F85311854BF33006995E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C69F85331854BF33006995E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C69F85351854BF33006995E4 /* Flickreel-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Flickreel-Prefix.pch"; sourceTree = "<group>"; };
-		C69F85361854BF33006995E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		C69F85371854BF33006995E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C69F85361854BF33006995E4 /* Application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
+		C69F85371854BF33006995E4 /* Application.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Application.m; sourceTree = "<group>"; };
 		C69F853A1854BF33006995E4 /* Flickreel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Flickreel.xcdatamodel; sourceTree = "<group>"; };
 		C69F853C1854BF33006995E4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C69F85421854BF33006995E4 /* FlickreelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickreelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +73,18 @@
 		C69F854C1854BF33006995E4 /* FlickreelTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlickreelTests-Info.plist"; sourceTree = "<group>"; };
 		C69F854E1854BF33006995E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C69F85501854BF33006995E4 /* FlickreelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickreelTests.m; sourceTree = "<group>"; };
+		C69F855D1854C86B006995E4 /* Flickreel.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Flickreel.storyboard; sourceTree = "<group>"; };
+		C69F855F1854CB7E006995E4 /* MoviesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesTableViewController.h; sourceTree = "<group>"; };
+		C69F85601854CB7E006995E4 /* MoviesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesTableViewController.m; sourceTree = "<group>"; };
+		C69F85621854D940006995E4 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		C69F85631854D940006995E4 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		C69F85651854EADA006995E4 /* AddMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddMovieViewController.h; sourceTree = "<group>"; };
+		C69F85661854EADA006995E4 /* AddMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddMovieViewController.m; sourceTree = "<group>"; };
+		C6AF5AC418590D4A0087F8E4 /* DrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawerController.h; sourceTree = "<group>"; };
+		C6AF5AC518590D4A0087F8E4 /* DrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawerController.m; sourceTree = "<group>"; };
+		C6B1C3CD54FD42439169FDC2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6E6268B185F85640022023E /* SearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchController.h; sourceTree = "<group>"; };
+		C6E6268C185F85640022023E /* SearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +96,7 @@
 				C69F852C1854BF33006995E4 /* CoreData.framework in Frameworks */,
 				C69F852A1854BF33006995E4 /* UIKit.framework in Frameworks */,
 				C69F85261854BF33006995E4 /* Foundation.framework in Frameworks */,
+				C73E6A8F0D62429DBFB89278 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +114,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C64DCB11185CFD28002906BC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C64DCB12185CFED2002906BC /* MoviesView.h */,
+				C64DCB13185CFED2002906BC /* MoviesView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		C69F85191854BF33006995E4 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +130,7 @@
 				C69F854A1854BF33006995E4 /* FlickreelTests */,
 				C69F85241854BF33006995E4 /* Frameworks */,
 				C69F85231854BF33006995E4 /* Products */,
+				670BE8090EE7426B9A9207A4 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +151,7 @@
 				C69F85291854BF33006995E4 /* UIKit.framework */,
 				C69F852B1854BF33006995E4 /* CoreData.framework */,
 				C69F85431854BF33006995E4 /* XCTest.framework */,
+				C6B1C3CD54FD42439169FDC2 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,10 +159,20 @@
 		C69F852D1854BF33006995E4 /* Flickreel */ = {
 			isa = PBXGroup;
 			children = (
-				C69F85361854BF33006995E4 /* AppDelegate.h */,
-				C69F85371854BF33006995E4 /* AppDelegate.m */,
-				C69F853C1854BF33006995E4 /* Images.xcassets */,
+				C69F85361854BF33006995E4 /* Application.h */,
+				C69F85371854BF33006995E4 /* Application.m */,
 				C69F85391854BF33006995E4 /* Flickreel.xcdatamodeld */,
+				C6D6D2BF18561ED200CA77B9 /* Models */,
+				C69F855D1854C86B006995E4 /* Flickreel.storyboard */,
+				C6D6D2BE18561EC700CA77B9 /* Controllers */,
+				C64DCB11185CFD28002906BC /* Views */,
+				C69F855F1854CB7E006995E4 /* MoviesTableViewController.h */,
+				C69F85601854CB7E006995E4 /* MoviesTableViewController.m */,
+				C69F85651854EADA006995E4 /* AddMovieViewController.h */,
+				C69F85661854EADA006995E4 /* AddMovieViewController.m */,
+				C6376A7C1855000300333547 /* ShowMovieViewController.h */,
+				C6376A7D1855000300333547 /* ShowMovieViewController.m */,
+				C69F853C1854BF33006995E4 /* Images.xcassets */,
 				C69F852E1854BF33006995E4 /* Supporting Files */,
 			);
 			path = Flickreel;
@@ -153,6 +207,30 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C6D6D2BE18561EC700CA77B9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C6376A7F18550D2500333547 /* SearchControllers.h */,
+				C6376A8018550D2500333547 /* SearchControllers.m */,
+				C6E6268B185F85640022023E /* SearchController.h */,
+				C6E6268C185F85640022023E /* SearchController.m */,
+				C6AF5AC418590D4A0087F8E4 /* DrawerController.h */,
+				C6AF5AC518590D4A0087F8E4 /* DrawerController.m */,
+				C6277995185DE7A9005EF665 /* NavigationController.h */,
+				C6277996185DE7A9005EF665 /* NavigationController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C6D6D2BF18561ED200CA77B9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C69F85621854D940006995E4 /* Movie.h */,
+				C69F85631854D940006995E4 /* Movie.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,9 +238,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C69F85541854BF33006995E4 /* Build configuration list for PBXNativeTarget "Flickreel" */;
 			buildPhases = (
+				A82057B472E7440390AF8A22 /* Check Pods Manifest.lock */,
 				C69F851E1854BF33006995E4 /* Sources */,
 				C69F851F1854BF33006995E4 /* Frameworks */,
 				C69F85201854BF33006995E4 /* Resources */,
+				E026022E89974EDD8B41A71F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,6 +310,7 @@
 			files = (
 				C69F85321854BF33006995E4 /* InfoPlist.strings in Resources */,
 				C69F853D1854BF33006995E4 /* Images.xcassets in Resources */,
+				C69F855E1854C86B006995E4 /* Flickreel.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,14 +324,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A82057B472E7440390AF8A22 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E026022E89974EDD8B41A71F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C69F851E1854BF33006995E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C69F85381854BF33006995E4 /* AppDelegate.m in Sources */,
+				C69F85381854BF33006995E4 /* Application.m in Sources */,
+				C64DCB14185CFED2002906BC /* MoviesView.m in Sources */,
+				C6376A7E1855000300333547 /* ShowMovieViewController.m in Sources */,
 				C69F85341854BF33006995E4 /* main.m in Sources */,
+				C6376A8118550D2500333547 /* SearchControllers.m in Sources */,
+				C69F85641854D940006995E4 /* Movie.m in Sources */,
+				C69F85671854EADA006995E4 /* AddMovieViewController.m in Sources */,
 				C69F853B1854BF33006995E4 /* Flickreel.xcdatamodeld in Sources */,
+				C6E6268D185F85640022023E /* SearchController.m in Sources */,
+				C6277997185DE7A9005EF665 /* NavigationController.m in Sources */,
+				C6AF5AC618590D4A0087F8E4 /* DrawerController.m in Sources */,
+				C69F85611854CB7E006995E4 /* MoviesTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +489,7 @@
 		};
 		C69F85551854BF33006995E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 670BE8090EE7426B9A9207A4 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -379,6 +503,7 @@
 		};
 		C69F85561854BF33006995E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 670BE8090EE7426B9A9207A4 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -451,6 +576,7 @@
 				C69F85561854BF33006995E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C69F85571854BF33006995E4 /* Build configuration list for PBXNativeTarget "FlickreelTests" */ = {
 			isa = XCConfigurationList;
@@ -459,6 +585,7 @@
 				C69F85591854BF33006995E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

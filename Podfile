@@ -1,0 +1,6 @@
+platform :ios, '7.0'
+pod 'AFNetworking', '~> 2.0.3'
+pod 'JDStatusBarNotification'
+pod 'SuProgress'
+pod 'MMDrawerController', '~> 0.5.1'
+pod 'AMScrollingNavbar', '~> 0.4.1'
