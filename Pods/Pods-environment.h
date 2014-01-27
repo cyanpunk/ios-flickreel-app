@@ -90,6 +90,12 @@
 #define COCOAPODS_VERSION_MINOR_MMDrawerController_Subclass 5
 #define COCOAPODS_VERSION_PATCH_MMDrawerController_Subclass 1
 
+// SVPullToRefresh
+#define COCOAPODS_POD_AVAILABLE_SVPullToRefresh
+#define COCOAPODS_VERSION_MAJOR_SVPullToRefresh 0
+#define COCOAPODS_VERSION_MINOR_SVPullToRefresh 4
+#define COCOAPODS_VERSION_PATCH_SVPullToRefresh 1
+
 // SuProgress
 #define COCOAPODS_POD_AVAILABLE_SuProgress
 #define COCOAPODS_VERSION_MAJOR_SuProgress 0

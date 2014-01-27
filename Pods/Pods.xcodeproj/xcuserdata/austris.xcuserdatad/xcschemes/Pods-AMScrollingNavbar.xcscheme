@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9699E0CE0DD84FC9932E778C"
+               BlueprintIdentifier = "03A1F6D09AD44446AE1CFB9A"
                BuildableName = "libPods-AMScrollingNavbar.a"
                BlueprintName = "Pods-AMScrollingNavbar"
                ReferencedContainer = "container:Pods.xcodeproj">

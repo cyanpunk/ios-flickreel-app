@@ -10,13 +10,33 @@
 
 @implementation SearchController
 
+@synthesize fetchedSearchResultsPage;
+@synthesize fetchedSearchResultsNextPage;
+@synthesize fetchedSearchResultsTotalPages;
+
+@synthesize queryInProgress;
+
+@synthesize nextResultsPage;
+@synthesize lastResultsPage;
+
 @synthesize fetchedSearchResults = _fetchedSearchResults;
 
 #pragma mark - SearchController methods
 
-- (void)fetchSearchResults:(NSString *)searchText
+- (NSNumber *)setNextResultsPage
 {
-    NSString *URLString = [[NSString alloc] initWithFormat:@"https://api.themoviedb.org/3/search/movie?query=%@&api_key=207f4a1ca51c8dd2327e5130992bb0b5", searchText];
+    int currentPage = [[self nextResultsPage] intValue];
+    
+    currentPage++;
+    
+    return [NSNumber numberWithInt:currentPage];
+}
+
+- (void)fetchQueryResults:(NSString *)query onPage:(NSNumber *)page
+{
+    [self setQueryInProgress:YES];
+    
+    NSString *URLString = [[NSString alloc] initWithFormat:@"https://api.themoviedb.org/3/search/movie?query=%@&page=%@&api_key=207f4a1ca51c8dd2327e5130992bb0b5", query, page];
     
     URLString = [URLString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
@@ -27,29 +47,38 @@
     [operation setResponseSerializer:[AFJSONResponseSerializer serializer]];
     
     // Set operation outcome logic
-    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject)
-     {
-         [self setFetchedSearchResults:[responseObject objectForKey:@"results"]];
-         
-         // Check if results contains data
-         if ([[self fetchedSearchResults] count] != 0)
-         {
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id response)
+        {
+             //[self setFetchedSearchResults:[responseObject objectForKey:@"results"]];
+
+             //[[self dataSource] addEntriesFromDictionary:[responseObject objectForKey:@"results"]];
              
-         }
-         else
-         {
+             [self setFetchedSearchResultsPage:page];
              
-         }
-         
-         [[self tableView] reloadData];
-         
-         //[JDStatusBarNotification dismissAnimated:YES];
-     }
-     failure:^(AFHTTPRequestOperation *operation, NSError *error)
-     {
-         [self emptySearchResults];
-     }
-     ];
+             [[self dataSource] addObjectsFromArray:[response objectForKey:@"results"]];
+             
+             // Check if results contains data
+             if ([[self fetchedSearchResults] count] != 0)
+             {
+                 
+             }
+             else
+             {
+                 
+             }
+             
+             [[self tableView] reloadData];
+            
+            [self setQueryInProgress:NO];
+             
+             //[JDStatusBarNotification dismissAnimated:YES];
+        }
+        failure:^(AFHTTPRequestOperation *operation, NSError *error)
+        {
+            //[self emptySearchResults];
+            NSLog(@"Fetch error!");
+        }
+    ];
     
     // Assign progress to fetch operation
     //[self SuProgressForAFHTTPRequestOperation:operation];
@@ -92,16 +121,31 @@
 {
     [super viewDidLoad];
     
+    [self setFetchedSearchResultsPage:[[NSNumber alloc] initWithInt:0]];
+    [self setDataSource:[NSMutableArray array]];
+    
     [[self searchBar] setDelegate:self];
     [[self tableView] setDelegate:self];
     [[self tableView] setDataSource:self];
+    
+    [self.tableView addInfiniteScrollingWithActionHandler:^{
+        if ([self queryInProgress] == NO)
+        {
+            [self fetchQueryResults:[self.searchBar text] onPage:[self setNextResultsPage]];
+            [self dismissKeyboard];
+        }
+        else
+        {
+            [self.tableView.infiniteScrollingView stopAnimating];
+        }
+    }];
     
 	// Do any additional setup after loading the view.
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [self openKeyboard];
+    //[self openKeyboard];
 }
 
 - (void)didReceiveMemoryWarning
@@ -114,8 +158,15 @@
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar;
 {
     //[JDStatusBarNotification showWithStatus:@"Search in progress..."];
-    [self fetchSearchResults:[self.searchBar text]];
-    [self dismissKeyboard];
+    if ([self queryInProgress] == NO)
+    {
+        [self setNextResultsPage:[NSNumber numberWithInt:0]];
+        [[self dataSource] removeAllObjects];
+        [[self tableView] reloadData];
+        
+        [self fetchQueryResults:[self.searchBar text] onPage:[self setNextResultsPage]];
+        [self dismissKeyboard];
+    }
 }
 
 
@@ -128,7 +179,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[self fetchedSearchResults] count];
+    return [[self dataSource] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -137,9 +188,9 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
-    NSDictionary *results = [[self fetchedSearchResults] objectAtIndex:[indexPath row]];
+    NSDictionary *movie = [[self dataSource] objectAtIndex:[indexPath row]];
     
-    [[cell textLabel] setText:[results objectForKey:@"title"]];
+    [[cell textLabel] setText:[movie objectForKey:@"title"]];
     
     return cell;
 }
